@@ -1,7 +1,6 @@
 #!/bin/bash
 # Saya ga tau bash scripting
 # Harap maklum hehehehe...
-# Jangan lupa mampir www.ari-f.com
 echo "-------------------------------"
 echo "USERNAME          EXP DATE     "
 echo "-------------------------------"
