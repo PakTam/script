@@ -50,8 +50,8 @@ if [ -e /etc/openvpn/server.conf ]; then
 		esac
 	done
 else
-	echo 'Selamat Datang di quick OpenVPN "Da[R]kCente[R]" installer'
-	echo "Created by Dimas Yudha Permana"
+	echo 'Selamat Datang di quick OpenVPN installer'
+	echo "Created by Choirul Anam"
 	echo ""
 	# OpenVPN setup and first user creation
 	echo " saya perlu tahu alamat IPv4 yang ingin diinstall OpenVPN"
@@ -65,12 +65,12 @@ else
 	echo "Hal ini dapat berguna untuk menghubungkan ke restrictive networks"
 	read -p "Listen port 53 [y/n]:" -e -i y ALTPORT
 	echo ""
-	echo "Sebutkan namamu untuk cert klien lOLZ juga Boleh"
+	echo "Sebutkan namamu untuk cert klien lOLZ juga Boleh :v"
 	echo "Silakan, gunakan satu kata saja, tidak ada karakter khusus"
 	read -p "Nama Client: " -e -i client CLIENT
 	echo ""
 	echo "Oke, itu semua saya butuhkan. Kami siap untuk setup OpenVPN server Anda sekarang"
-	read -n1 -r -p "Tekan sembarang tombol untuk melanjutkan,,teken hidung sampe kiamat juga boleh ..."
+	read -n1 -r -p "Tekan sembarang tombol untuk melanjutkan ... OKE :D"
 	apt-get update
 	apt-get install openvpn iptables openssl -y
 	cp -R /usr/share/doc/openvpn/examples/easy-rsa/ /etc/openvpn
