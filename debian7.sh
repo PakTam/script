@@ -63,7 +63,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.github.com/choirulanam217/script/master/conf/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup by Choirul Anam</pre>" > /home/vps/public_html/index.html
+echo "<pre>Setup by PakTam</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.github.com/choirulanam217/script/master/conf/vps.conf"
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
@@ -157,7 +157,7 @@ apt-get -y install fail2ban;service fail2ban restart
 # install squid3
 apt-get -y install squid3
 wget -O /etc/squid3/squid.conf "https://raw.github.com/choirulanam217/script/master/conf/squid3.conf"
-sed -i 's/xxxxxxxxx-xxxxxxxxx/$MYIP/g' /etc/squid3/squid.conf;
+sed -i 's/xxxxxxxxx-xxxxxxxxx/$MYIP2/g' /etc/squid3/squid.conf;
 service squid3 restart
 
 # install webmin
