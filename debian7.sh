@@ -270,3 +270,5 @@ echo ""  | tee -a log-install.txt
 echo "SILAHKAN REBOOT VPS ANDA !"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "==============================================="  | tee -a log-install.txt
+rm -f /root/debian7.sh
+
