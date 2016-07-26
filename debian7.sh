@@ -157,7 +157,7 @@ apt-get -y install fail2ban;service fail2ban restart
 # install squid3
 apt-get -y install squid3
 wget -O /etc/squid3/squid.conf "https://raw.github.com/choirulanam217/script/master/conf/squid3.conf"
-sed -i 's/xxxxxxxxx-xxxxxxxxx/$MYIP2/g' /etc/squid3/squid.conf;
+sed -i 's/$MYIP2/g' /etc/squid3/squid.conf;
 service squid3 restart
 
 # install webmin
@@ -193,6 +193,18 @@ chmod +x dropmon
 chmod +x bench-network.sh
 chmod +x speedtest_cli.py
 chmod +x ps_mem.py
+
+# virtual ram
+cd /var
+touch swap.img
+chmod 600 swap.img
+dd if=/dev/zero of=/var/swap.img bs=2048k count=1000
+mkswap /var/swap.img
+swapon /var/swap.img
+echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
+sysctl -w vm.swappiness=30
+free
+
 
 # finalisasi
 chown -R www-data:www-data /home/vps/public_html
