@@ -157,7 +157,7 @@ apt-get -y install fail2ban;service fail2ban restart
 # install squid3
 apt-get -y install squid3
 wget -O /etc/squid3/squid.conf "https://raw.github.com/PakTam/script/master/conf/squid3.conf"
-sed -i 's/acl SSH dst /acl SSH dst $MYIP2/g' /etc/squid3/squid.conf;
+sed -i 's/acl SSH dst /acl SSH dst $MYIP2/255.255.255.255/g' /etc/squid3/squid.conf;
 service squid3 restart
 
 # install webmin
