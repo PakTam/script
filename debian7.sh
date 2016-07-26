@@ -10,8 +10,8 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 # install wget and curl
 apt-get update;apt-get -y install wget curl;
 
-# set time GMT +7
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+# set time GMT +8
+ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime;
 
 # set locale
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
@@ -91,9 +91,9 @@ cd /etc/openvpn/
 wget -O /etc/openvpn/1194-client.ovpn "https://raw.github.com/choirulanam217/script/master/conf/1194-client.conf"
 sed -i $MYIP2 /etc/openvpn/1194-client.ovpn;
 PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-useradd -M -s /bin/false Choirul
-echo "Choirul:$PASS" | chpasswd
-echo "Choirul" > pass.txt
+useradd -M -s /bin/false Admin
+echo "Admin:$PASS" | chpasswd
+echo "Admin" > pass.txt
 echo "$PASS" >> pass.txt
 tar cf client.tar 1194-client.ovpn pass.txt
 cp client.tar /home/vps/public_html/
@@ -162,10 +162,10 @@ service squid3 restart
 
 # install webmin
 cd
-wget "http://prdownloads.sourceforge.net/webadmin/webmin_1.670_all.deb"
-dpkg --install webmin_1.670_all.deb;
+wget "http://prdownloads.sourceforge.net/webadmin/webmin_1.801_all.deb"
+dpkg -i --force-all webmin_1.801_all.deb;
 apt-get -y -f install;
-rm /root/webmin_1.670_all.deb
+rm /root/webmin_1.801_all.deb
 service webmin restart
 service vnstat restart
 
@@ -203,7 +203,7 @@ service webmin restart
 
 # info
 clear
-echo "Auto Installer by Choirul Anam" | tee log-install.txt
+echo "Auto Installer by PakTam" | tee log-install.txt
 echo "===============================================" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Service"  | tee -a log-install.txt
@@ -235,7 +235,7 @@ echo "./user-limit.sh 2"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Account Default (utk SSH dan VPN)"  | tee -a log-install.txt
 echo "---------------"  | tee -a log-install.txt
-echo "User     : Choirul"  | tee -a log-install.txt
+echo "User     : Admin"  | tee -a log-install.txt
 echo "Password : $PASS"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Fitur lain"  | tee -a log-install.txt
