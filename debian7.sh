@@ -173,12 +173,12 @@ cd
 wget -O speedtest_cli.py "https://raw.github.com/sivel/speedtest-cli/master/speedtest_cli.py"
 wget -O bench-network.sh "https://raw.github.com/choirulanam217/script/master/conf/bench-network.sh"
 wget -O ps_mem.py "https://raw.github.com/pixelb/ps_mem/master/ps_mem.py"
-wget -O dropmon "https://raw.githubusercontent.com/PakTam/script/master/conf/dropmon.sh"
-wget -O userlogin.sh "https://raw.githubusercontent.com/PakTam/script/master/conf/userlogin.sh"
-wget -O userexpired.sh "https://raw.githubusercontent.com/PakTam/script/master/conf/userexpired.sh"
-wget -O userlimit.sh "https://raw.githubusercontent.com/PakTam/script/master/conf/userlimit.sh"
-wget -O expire.sh "https://raw.githubusercontent.com/PakTam/script/master/conf/expire.sh"
-wget -O autokill.sh "https://raw.githubusercontent.com/PakTam/script/master/conf/autokill.sh"
+wget -O dropmon "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/dropmon.sh"
+wget -O userlogin.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/userlogin.sh"
+wget -O userexpired.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/userexpired.sh"
+wget -O userlimit.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/userlimit.sh"
+wget -O expire.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/expire.sh"
+wget -O autokill.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/autokill.sh"
 echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimit
 echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 echo "@reboot root /root/autokill.sh" > /etc/cron.d/autokill
@@ -271,4 +271,3 @@ echo "SILAHKAN REBOOT VPS ANDA !"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "==============================================="  | tee -a log-install.txt
 rm -f /root/debian7.sh
-
