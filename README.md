@@ -35,7 +35,7 @@ Tested on
 
 ### Debian 7 32bit
 ```
-https://raw.githubusercontent.com/PakTam/script/master/debian7.sh && bash debian7.sh
+wget https://raw.githubusercontent.com/PakTam/script/master/debian7.sh && bash debian7.sh
 
 ```
 Tested on
