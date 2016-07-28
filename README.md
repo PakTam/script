@@ -35,8 +35,8 @@ Tested on
 
 ### Debian 7 32bit
 ```
-https://raw.githubusercontent.com/PakTam/script/master/debian7.sh
-bash debian7.sh
+https://raw.githubusercontent.com/PakTam/script/master/debian7.sh && bash debian7.sh
+
 ```
 Tested on
 * Debian 7 32 bit
