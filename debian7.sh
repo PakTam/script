@@ -90,7 +90,7 @@ iptables-restore < /etc/iptables.up.rules
 #cd /etc/openvpn/
 #wget -O /etc/openvpn/1194-client.ovpn "https://raw.github.com/choirulanam217/script/master/conf/1194-client.conf"
 #sed -i $MYIP2 /etc/openvpn/1194-client.ovpn;
-#PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
+PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
 useradd -M -s /bin/false Admin
 echo "Admin:$PASS" | chpasswd
 echo "Admin" > pass.txt
