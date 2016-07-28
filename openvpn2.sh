@@ -34,4 +34,9 @@ rm /root/webmin_1.801_all.deb
 service webmin restart
 service vnstat restart
 
+cd
+wget "https://raw.githubusercontent.com/PakTam/script/master/openvpn1194.sh"
+bash openvpn1194.sh
+
+rm -f /root/openvpn1194.sh
 rm -f /root/openvpn2.sh
