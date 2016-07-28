@@ -35,7 +35,7 @@ Tested on
 
 ### Debian 7 32bit
 ```
-wget https://raw.github.com/choirulanam217/script/master/debian7.sh
+https://raw.githubusercontent.com/PakTam/script/master/debian7.sh
 bash debian7.sh
 ```
 Tested on
@@ -48,14 +48,14 @@ Tested on
 * OpenSSH port 22, 143
 * OpenVPN port 1194 tcp
 * Dropbear port 109, 110, 443
-* Squid port 8080 (limit to IP VPS)
+* Squid port 3128, 8080, 80 (limit to IP VPS)
 * badvpn-udpgw port 7300
 
 ### Fitur
 * Webmin http(s)://[ip]:10000/
 * vnstat http://[ip]/vnstat/
 * MRTG http://[ip]/mrtg/
-* Timezone : Asia/Jakarta
+* Timezone : Asia/Kuala Lumpur
 * Fail2Ban : [on]
 * IPv6     : [off]
 
